@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ItemsCD" representedClassName="ItemsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="credit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="probability" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toSections" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SectionsCD" inverseName="toItems" inverseEntity="SectionsCD" syncable="YES"/>
+    </entity>
+    <entity name="SectionsCD" representedClassName="SectionsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="credit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isVisible" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemsCD" inverseName="toSections" inverseEntity="ItemsCD" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ItemsCD" positionX="108" positionY="72" width="128" height="135"/>
+        <element name="SectionsCD" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>
